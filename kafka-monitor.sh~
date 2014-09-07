@@ -1,6 +1,8 @@
 #!/bin/bash
-java -Xms512M -Xmx512M -Xss1024K -XX:PermSize=256m -XX:MaxPermSize=512m -cp KafkaOffsetMonitor-assembly-0.1.0-SNAPSHOT.jar \
-     com.quantifind.kafka.offsetapp.OffsetGetterWeb --zk localhost:2181 \
+java -jar ./kafka-proxy-0.0.1-SNAPSHOT-jar-with-dependencies.jar &
+
+java -Xms512M -Xmx512M -Xss1024K -XX:PermSize=256m -XX:MaxPermSize=512m -cp ./KafkaOffsetMonitor-assembly-0.1.0-SNAPSHOT.jar \
+     com.quantifind.kafka.offsetapp.OffsetGetterWeb --zk userzookeeper5.d.xiaonei.com:2181,userzookeeper4.d.xiaonei.com:2181,userzookeeper3.d.xiaonei.com:2181,userzookeeper2.d.xiaonei.com:2181,userzookeeper1.d.xiaonei.com:2181/kafka/addmp \
      --port 8086 \
      --refresh 10.seconds \
      --retain 7.days 1>kafka-monitor-logs/stdout.log 2>kafka-monitor-logs/stderr.log &
