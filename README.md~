@@ -39,7 +39,6 @@ This is a small webapp, you can run it locally or on a server, as long as you ha
 kafka consumer´úÀí
 java -jar ./lib/kafka-proxy-0.0.1-SNAPSHOT-jar-with-dependencies.jar &
 
-kafka ¼à¿Ø
 java -cp KafkaOffsetMonitor-assembly-0.1.0-SNAPSHOT.jar \
      com.quantifind.kafka.offsetapp.OffsetGetterWeb \
      --zk zk-server1,zk-server2 \
