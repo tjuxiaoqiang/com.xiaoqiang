@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Vendor: org.specs2
+Implementation-Title: specs2
+Implementation-Version: 1.12.3
+Implementation-Vendor-Id: org.specs2
+Specification-Vendor: org.specs2
+Specification-Title: specs2
+Specification-Version: 1.12.3
+

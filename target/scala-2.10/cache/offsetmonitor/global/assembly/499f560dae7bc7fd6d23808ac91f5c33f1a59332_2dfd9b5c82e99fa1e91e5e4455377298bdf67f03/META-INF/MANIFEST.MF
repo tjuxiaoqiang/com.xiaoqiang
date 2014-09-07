@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Vendor: org.specs2
+Implementation-Title: specs2-scalaz-core
+Implementation-Version: 6.0.1
+Implementation-Vendor-Id: org.specs2
+Specification-Vendor: org.specs2
+Specification-Title: specs2-scalaz-core
+Specification-Version: 6.0.1
+Main-Class: org.specs2.internal.scalaz.Main
+

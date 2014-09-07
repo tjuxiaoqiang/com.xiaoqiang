@@ -1,0 +1,63 @@
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2014-09-07 11:57:10.866:INFO:oejs.Server:jetty-7.x.y-SNAPSHOT
+log4j:WARN No appenders could be found for logger (org.I0Itec.zkclient.ZkConnection).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+log4j:WARN No appenders could be found for logger (org.I0Itec.zkclient.ZkEventThread).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+2014-09-07 11:57:10.905:INFO:oejsh.ContextHandler:started o.e.j.s.ServletContextHandler{/,jar:file:/home/xiaoqiang/workspace/KafkaOffsetMonitor-0.2.0/target/scala-2.10/KafkaOffsetMonitor-assembly-0.1.0-SNAPSHOT.jar!/offsetapp}
+2014-09-07 11:57:10.923:INFO:oejs.AbstractConnector:Started SocketConnector@0.0.0.0:8086
+2014-09-07 11:57:19.553:WARN:oejs.ServletHandler:/topicdetails/test
+java.lang.RuntimeException: error constructing TopicCount : *1*test
+	at com.quantifind.kafka.OffsetGetter.com$quantifind$kafka$OffsetGetter$$constructTopicCount(OffsetGetter.scala:206)
+	at com.quantifind.kafka.OffsetGetter$$anonfun$com$quantifind$kafka$OffsetGetter$$getConsumersPerTopic$1.apply(OffsetGetter.scala:223)
+	at com.quantifind.kafka.OffsetGetter$$anonfun$com$quantifind$kafka$OffsetGetter$$getConsumersPerTopic$1.apply(OffsetGetter.scala:222)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:727)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1157)
+	at scala.collection.IterableLike$class.foreach(IterableLike.scala:72)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:54)
+	at com.quantifind.kafka.OffsetGetter.com$quantifind$kafka$OffsetGetter$$getConsumersPerTopic(OffsetGetter.scala:222)
+	at com.quantifind.kafka.OffsetGetter$$anonfun$getActiveTopicMap$1.apply(OffsetGetter.scala:247)
+	at com.quantifind.kafka.OffsetGetter$$anonfun$getActiveTopicMap$1.apply(OffsetGetter.scala:246)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:727)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1157)
+	at scala.collection.IterableLike$class.foreach(IterableLike.scala:72)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:54)
+	at com.quantifind.kafka.OffsetGetter.getActiveTopicMap(OffsetGetter.scala:246)
+	at com.quantifind.kafka.OffsetGetter.getTopicDetail(OffsetGetter.scala:181)
+	at com.quantifind.kafka.offsetapp.OffsetGetterWeb$$anonfun$getTopicDetail$1.apply(OffsetGetterWeb.scala:111)
+	at com.quantifind.kafka.offsetapp.OffsetGetterWeb$$anonfun$getTopicDetail$1.apply(OffsetGetterWeb.scala:111)
+	at com.quantifind.kafka.offsetapp.OffsetGetterWeb$.getTopicDetail(OffsetGetterWeb.scala:110)
+	at com.quantifind.kafka.offsetapp.OffsetGetterWeb$$anon$1$$anonfun$intent$1.applyOrElse(OffsetGetterWeb.scala:153)
+	at com.quantifind.kafka.offsetapp.OffsetGetterWeb$$anon$1$$anonfun$intent$1.applyOrElse(OffsetGetterWeb.scala:139)
+	at scala.PartialFunction$Lifted.apply(PartialFunction.scala:218)
+	at scala.PartialFunction$Lifted.apply(PartialFunction.scala:214)
+	at unfiltered.response.Pass$PartialAttempt.attemptWithPass(pass.scala:67)
+	at unfiltered.response.Pass$PassingAttempt$class.attempt(pass.scala:60)
+	at unfiltered.response.Pass$PartialAttempt.attempt(pass.scala:62)
+	at unfiltered.response.Pass$$anonfun$fold$1.apply(pass.scala:43)
+	at unfiltered.response.Pass$FunctionAttempt.apply(pass.scala:72)
+	at unfiltered.filter.Plan$class.doFilter(plans.scala:50)
+	at com.quantifind.kafka.offsetapp.OffsetGetterWeb$$anon$1.doFilter(OffsetGetterWeb.scala:134)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1331)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:477)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1031)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:406)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:965)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:250)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:111)
+	at org.eclipse.jetty.server.Server.handle(Server.java:349)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:449)
+	at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:47)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:910)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:634)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:230)
+	at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:66)
+	at org.eclipse.jetty.server.bio.SocketConnector$ConnectorEndPoint.run(SocketConnector.java:254)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:599)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:534)
+	at java.lang.Thread.run(Thread.java:745)
